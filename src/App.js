@@ -1,11 +1,6 @@
 import React from 'react';
+import Intro from './components/Intro';
 import './App.css';
-
-const Intro = (props) => (
-    <p>
-      Our First Functional Component
-    </p>
-)
 
 function App() {
   return (
@@ -13,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">TV series List</h1>
       </header>
-      <Intro />
+      <Intro message="Here you can find all of your most loved series" />
     </div>
   );
 }

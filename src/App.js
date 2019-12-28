@@ -1,22 +1,19 @@
 import React from 'react';
 import './App.css';
 
+const Intro = (props) => (
+    <p>
+      Our First Functional Component
+    </p>
+)
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1 className="App-title">TV series List</h1>
       </header>
+      <Intro />
     </div>
   );
 }

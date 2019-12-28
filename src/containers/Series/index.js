@@ -31,12 +31,12 @@ class Series extends Component {
                     />
                 </div>
                 {
-                series.length === 0 && seriesName.trim() === ''
+                    !isFetching && series.length === 0 && seriesName.trim() === ''
                 &&
                 <p>Please enter series name into this input</p>
                 }
                 {
-                    series.length === 0 & seriesName.trim() !== ''
+                    !isFetching && series.length === 0 & seriesName.trim() !== ''
                     &&
                     <p>No TV series have been found with this name</p>
                 }

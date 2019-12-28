@@ -33,14 +33,19 @@ class Series extends Component {
                 {
                 series.length === 0 && seriesName.trim() === ''
                 &&
-                <p>Please enter series namo into this input</p>
+                <p>Please enter series name into this input</p>
                 }
                 {
                     series.length === 0 & seriesName.trim() !== ''
                     &&
                     <p>No TV series have been found with this name</p>
                 }
-            <SeriesList list={this.state.series}/>
+                {
+                    isFetching && <p>Loading...</p>
+                }
+                {
+                    !isFetching && <SeriesList list={this.state.series}/>
+                }
             </div>
         )
     }

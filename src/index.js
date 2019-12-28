@@ -9,7 +9,7 @@ const getCurrentDate = () => {
     return date.toDateString();
 }
 
-const greeting = <h1>Hello World!</h1>;
+const greeting = <h1>Hello World! Current date: {getCurrentDate()}</h1>;
 
 
 ReactDOM.render(greeting, document.getElementById('root'));

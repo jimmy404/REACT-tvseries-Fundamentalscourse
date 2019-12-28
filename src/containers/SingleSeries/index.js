@@ -22,7 +22,15 @@ class SingleSeries extends Component {
                 {
                     show !== null
                     &&
-                 <p>Show has been loaded</p>
+                    <div>
+                        <p>{show.name}</p>
+                        <p>Premiered - {show.premiered}</p>
+                        <p>Rating - {show.rating.average}</p>
+                        <p>Episodes - {show._embedded.episodes.length}</p>
+                        <p>
+                            <img src={show.image.medium} alt="Show"/>
+                        </p>
+                    </div>
                 }
             </div>
         )

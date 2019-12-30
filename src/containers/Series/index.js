@@ -3,15 +3,12 @@ import Intro from '../../components/Intro';
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader';
 
-
 class Series extends Component {
     state ={
         series: [],
         seriesName: '',
         isFetching: false
     }
-
-
 
     onSeriesInputChange = e => {
         this.setState({seriesName: e.target.value, isFetching: true });
@@ -20,7 +17,6 @@ class Series extends Component {
         .then(response => response.json())
         .then(json => this.setState({series: json, isFetching: false}));
     }
-
 
     render(){
         const {series, seriesName, isFetching } = this.state;
